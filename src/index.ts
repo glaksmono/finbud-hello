@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-import FinbudAIData from 'finbud.ai-data';
+import FinbudData from 'finbud-data';
 
 console.log('FINBUD_AI_DATA_API_KEY', process.env.FINBUD_AI_DATA_API_KEY);
 console.log('MCP_SERVER_URL', process.env.MCP_SERVER_URL);
@@ -10,7 +10,7 @@ console.log('MCP_SERVER_URL', process.env.MCP_SERVER_URL);
 // Instantiate the client
 // Authentication (e.g., API key) might be needed here depending on your API setup.
 // Example: const client = new FinbudAIData({ apiKey: process.env.FINBUD_API_KEY });
-const client = new FinbudAIData({
+const client = new FinbudData({
   apiKey: process.env.FINBUD_AI_DATA_API_KEY,
   baseURL: process.env.MCP_SERVER_URL // Or your actual MCP server URL string
 });
