@@ -4,14 +4,14 @@ dotenv.config();
 
 import FinbudData from 'finbud-data';
 
-console.log('FINBUD_AI_DATA_API_KEY', process.env.FINBUD_AI_DATA_API_KEY);
+console.log('FINBUD_DATA_API_KEY', process.env.FINBUD_DATA_API_KEY);
 console.log('MCP_SERVER_URL', process.env.MCP_SERVER_URL);
 
 // Instantiate the client
 // Authentication (e.g., API key) might be needed here depending on your API setup.
-// Example: const client = new FinbudAIData({ apiKey: process.env.FINBUD_API_KEY });
+// Example: const client = new FinbudData({ apiKey: process.env.FINBUD_DATA_API_KEY });
 const client = new FinbudData({
-  apiKey: process.env.FINBUD_AI_DATA_API_KEY,
+  apiKey: process.env.FINBUD_DATA_API_KEY,
   baseURL: process.env.MCP_SERVER_URL // Or your actual MCP server URL string
 });
 
@@ -35,7 +35,7 @@ async function main() {
       console.error('An unexpected error occurred:', error);
     }
     // Specific error handling based on the client library's error types can be added here
-    // e.g., if (error instanceof FinbudAIData.APIError) { ... }
+    // e.g., if (error instanceof FinbudData.APIError) { ... }
   }
 }
 
