@@ -5,14 +5,14 @@ dotenv.config();
 import FinbudData from 'finbud-data';
 
 console.log('FINBUD_DATA_API_KEY', process.env.FINBUD_DATA_API_KEY);
-console.log('MCP_SERVER_URL', process.env.MCP_SERVER_URL);
+console.log('FINBUD_DATA_BASE_URL', process.env.FINBUD_DATA_BASE_URL);
 
 // Instantiate the client
 // Authentication (e.g., API key) might be needed here depending on your API setup.
 // Example: const client = new FinbudData({ apiKey: process.env.FINBUD_DATA_API_KEY });
 const client = new FinbudData({
   apiKey: process.env.FINBUD_DATA_API_KEY,
-  baseURL: process.env.MCP_SERVER_URL // Or your actual MCP server URL string
+  baseURL: process.env.FINBUD_DATA_BASE_URL // Or your actual MCP server URL string
 });
 
 async function main() {
